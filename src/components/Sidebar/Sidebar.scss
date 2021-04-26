@@ -1,12 +1,13 @@
 .sidebar {
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   position: absolute;
   top: 0;
   z-index: 200;
   height: 100%;
   width: 350px;
-  background-color: rgb(219, 226, 233);
+  background-color: aliceblue;
   transition: all 400ms ease-out;
+  box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.137);
   // background-color: rgba(145, 145, 145, 0.959);
 
   ul {
@@ -20,12 +21,7 @@
       padding: 10px 5px;
       border-radius: 2px 0 0 2px;
       transition: all 350ms ease;
-      background: linear-gradient(
-        to right,
-        aliceblue,
-        rgba(255, 255, 240, 0.356),
-        rgba(255, 255, 240, 0)
-      );
+      background: linear-gradient(to left, aliceblue, rgba(0, 0, 0, 0));
       &:hover {
         background-color: rgb(208, 226, 228);
       }
@@ -44,6 +40,7 @@
     }
 
     .sidebar-quit {
+      user-select: none;
       p {
         color: rgb(80, 83, 87);
         cursor: pointer;

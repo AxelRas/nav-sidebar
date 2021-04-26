@@ -1,4 +1,8 @@
 .sidebar-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +17,10 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
 .sidebar-btn p {
@@ -24,4 +32,9 @@
   margin: 0;
   padding: 0;
 }
-/*# sourceMappingURL=Sidebar.css.map */
+
+.sidebar-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=SidebarBtn.css.map */

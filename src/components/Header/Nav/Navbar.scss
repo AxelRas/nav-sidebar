@@ -8,10 +8,47 @@
   p {
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: all 400ms ease-out;
+    transition: all 350ms ease;
+    background: linear-gradient(to left, aliceblue, rgba(0, 0, 0, 0));
     &:hover {
       background-color: rgb(208, 226, 228);
+    }
+  }
+}
+
+.navbar-btn {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-btn {
+    user-select: none;
+    width: 80px;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid black;
+    cursor: pointer;
+    p {
+      position: relative;
+      bottom: 6px;
+      height: 15px;
+      transform: scale(12, 2);
+      margin: 0;
+      // border: 1px solid black;
+      padding: 0;
+    }
+
+    transition: transform 300ms ease;
+
+    &:hover {
+      transform: rotateZ(90deg);
     }
   }
 }

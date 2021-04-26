@@ -1,14 +1,16 @@
 .sidebar {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
   position: absolute;
   top: 0;
   z-index: 200;
   height: 100%;
   width: 350px;
-  background-color: #dbe2e9;
+  background-color: aliceblue;
   -webkit-transition: all 400ms ease-out;
   transition: all 400ms ease-out;
+  -webkit-box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.137);
+          box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.137);
 }
 
 .sidebar ul {
@@ -23,8 +25,8 @@
   border-radius: 2px 0 0 2px;
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
-  background: -webkit-gradient(linear, left top, right top, from(aliceblue), color-stop(rgba(255, 255, 240, 0.356)), to(rgba(255, 255, 240, 0)));
-  background: linear-gradient(to right, aliceblue, rgba(255, 255, 240, 0.356), rgba(255, 255, 240, 0));
+  background: -webkit-gradient(linear, right top, left top, from(aliceblue), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to left, aliceblue, rgba(0, 0, 0, 0));
 }
 
 .sidebar ul li:hover {
@@ -46,6 +48,13 @@
 
 .sidebar .sidebar-title p {
   font-size: 1.4em;
+}
+
+.sidebar .sidebar-title .sidebar-quit {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .sidebar .sidebar-title .sidebar-quit p {

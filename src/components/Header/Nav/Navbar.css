@@ -17,12 +17,62 @@
 .navbar p {
   padding: 10px;
   cursor: pointer;
-  border-radius: 5px;
-  -webkit-transition: all 400ms ease-out;
-  transition: all 400ms ease-out;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  background: -webkit-gradient(linear, right top, left top, from(aliceblue), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to left, aliceblue, rgba(0, 0, 0, 0));
 }
 
 .navbar p:hover {
   background-color: #d0e2e4;
+}
+
+.navbar-btn {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-btn {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 80px;
+    justify-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+  }
+  .navbar-btn p {
+    position: relative;
+    bottom: 6px;
+    height: 15px;
+    -webkit-transform: scale(12, 2);
+            transform: scale(12, 2);
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-btn:hover {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */
