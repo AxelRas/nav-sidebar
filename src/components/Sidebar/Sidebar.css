@@ -1,0 +1,63 @@
+.sidebar {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  height: 100%;
+  width: 350px;
+  background-color: #dbe2e9;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+.sidebar ul {
+  list-style-type: georgian;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  width: auto;
+  margin: 20px 0;
+  padding: 10px 5px;
+  border-radius: 2px 0 0 2px;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  background: -webkit-gradient(linear, left top, right top, from(aliceblue), color-stop(rgba(255, 255, 240, 0.356)), to(rgba(255, 255, 240, 0)));
+  background: linear-gradient(to right, aliceblue, rgba(255, 255, 240, 0.356), rgba(255, 255, 240, 0));
+}
+
+.sidebar ul li:hover {
+  background-color: #d0e2e4;
+}
+
+.sidebar .sidebar-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sidebar .sidebar-title > * {
+  padding: 5px 20px;
+}
+
+.sidebar .sidebar-title p {
+  font-size: 1.4em;
+}
+
+.sidebar .sidebar-title .sidebar-quit p {
+  color: #505357;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform: scale(2, 1.5);
+          transform: scale(2, 1.5);
+}
+
+.sidebar .sidebar-title .sidebar-quit p:hover {
+  color: #979da1;
+}
+/*# sourceMappingURL=Sidebar.css.map */

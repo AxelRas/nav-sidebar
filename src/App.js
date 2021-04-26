@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Header from "./components/Header/Header";
+import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
 
-function App() {
+const sidebar = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {ReactDOM.createPortal(
+        <Sidebar items={props.sideBarItems} />,
+        document.getElementById("sidebar-root")
+      )}
+    </React.Fragment>
   );
+};
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      navItems: ["Home", "About", "Projects", "Contact", "Profile"],
+      sideBarItems: ["Home", "Team", "Projects", "Calendar", "Documents"],
+      sideBarShown: false,
+    };
+
+    this.onToggleSidebar = this.onToggleSidebar.bind(this);
+  }
+
+  onToggleSidebar() {
+    if (this.state.sideBarShown) {
+      this.setState({
+        sideBarShown: false,
+      });
+      document.querySelector(".sidebar").style.transform = `translateX(-100%)`;
+    } else {
+      this.setState({
+        sideBarShown: true,
+      });
+      document.querySelector(".sidebar").style.transform = `translateX(0)`;
+    }
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="App">
+          <Header
+            navItems={this.state.navItems}
+            onToggleSidebar={this.onToggleSidebar}
+            showSideBar={this.state.sideBarShown}
+          />
+          <Sidebar
+            onToggleSidebar={this.onToggleSidebar}
+            items={this.state.sideBarItems}
+          />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;

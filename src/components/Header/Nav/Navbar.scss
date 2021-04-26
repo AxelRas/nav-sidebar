@@ -1,0 +1,17 @@
+.navbar {
+  // border: 2px solid black;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  p {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 400ms ease-out;
+    &:hover {
+      background-color: rgb(208, 226, 228);
+    }
+  }
+}
